@@ -1,0 +1,18 @@
+esptool-js 0.6.1
+Copyright 2019 Espressif Systems (Shanghai) CO LTD
+https://github.com/espressif/esptool-js
+
+Concesso in licenza secondo la Apache License, Version 2.0 (file LICENSE in
+questa cartella). Licensed under the Apache License, Version 2.0 (see the
+LICENSE file in this folder).
+
+Il file esptool.js e' il file "bundle.js" del pacchetto npm esptool-js@0.6.1,
+copiato senza modifiche (rinominato soltanto).
+The file esptool.js is the unmodified "bundle.js" of the npm package
+esptool-js@0.6.1 (renamed only).
+SHA-256: ef7d5a237d3f273ecf546bcee65dddad90bd82cf02f22a980d1537e0cd79a152
+
+Il bundle contiene anche / The bundle also contains:
+- pako 2.1.0, Copyright (C) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn,
+  licenza MIT AND Zlib (file LICENSE-pako in questa cartella).
+- i "flasher stub" di Espressif (esptool), distribuiti con esptool-js.

@@ -1,0 +1,10 @@
+{
+  "name": "gp-databoard-aggiornamenti",
+  "private": true,
+  "type": "module",
+  "description": "Pagina di aggiornamento del display GP DataBoard (solo test, nessuna dipendenza da installare).",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\""
+  }
+}

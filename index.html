@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GP DataBoard – Aggiornamento</title>
+  <meta name="description" content="Aggiorna il tuo display GP DataBoard dal computer, con il cavo USB.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0B0B0E">
+  <link rel="stylesheet" href="css/stile.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main class="pagina">
+    <header class="testata">
+      <p class="marchio">GP DataBoard</p>
+      <h1>Aggiorna il display</h1>
+      <p class="sottotitolo">Dal computer, con il cavo USB. Ci vogliono un paio di minuti.</p>
+    </header>
+
+    <!-- Mostrato solo se il browser non supporta Web Serial -->
+    <section id="avviso-browser" class="avviso" hidden>
+      <h2>Serve Chrome o Edge su un computer</h2>
+      <p>Questo browser non può collegarsi al display. Apri questa pagina con Google Chrome o Microsoft Edge su un
+        computer (Windows, Mac o Linux). Dal telefono puoi solo leggere le istruzioni.</p>
+    </section>
+
+    <section class="passi" aria-labelledby="titolo-passi">
+      <h2 id="titolo-passi">Prima di iniziare</h2>
+      <ol>
+        <li>Scarica il file dell'aggiornamento dal gruppo Telegram (per esempio <code>gp-databoard-1.0.0.bin</code>).</li>
+        <li>Collega il display al computer con il cavo USB.</li>
+        <li>Premi <strong>Aggiorna</strong>, scegli il display nella finestra che si apre, poi scegli il file.</li>
+      </ol>
+    </section>
+
+    <!-- Pannello principale: cambia contenuto a ogni passo -->
+    <section id="pannello" class="pannello" aria-live="polite">
+      <div id="stato-inizio" class="stato">
+        <button id="pulsante-aggiorna" class="pulsante principale" type="button">Aggiorna</button>
+      </div>
+
+      <div id="stato-file" class="stato" hidden>
+        <p class="messaggio">Display trovato. Ora scegli il file scaricato da Telegram.</p>
+        <button id="pulsante-file" class="pulsante principale" type="button">Scegli il file</button>
+        <button class="pulsante secondario annulla" type="button">Annulla</button>
+      </div>
+
+      <div id="stato-conferma" class="stato" hidden>
+        <p class="messaggio">File controllato: <span id="nome-file" class="nome-file"></span></p>
+        <p class="versione">Versione <span id="versione-trovata"></span></p>
+        <p id="avviso-completo" class="attenzione" hidden>Verranno cancellati anche WiFi e impostazioni.</p>
+        <button id="pulsante-scrivi" class="pulsante principale" type="button">Scrivi sul display</button>
+        <button class="pulsante secondario annulla" type="button">Annulla</button>
+      </div>
+
+      <div id="stato-scrittura" class="stato" hidden>
+        <p id="fase" class="messaggio">Collegamento al display…</p>
+        <div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra">
+          <div class="barra-riempimento" id="barra-riempimento"></div>
+        </div>
+        <p class="percentuale" id="percentuale">0%</p>
+      </div>
+
+      <div id="stato-fatto" class="stato" hidden>
+        <p class="fatto">Fatto: il display si riavvia.</p>
+        <p class="messaggio">Ora puoi scollegare il cavo. Se dopo un minuto il display è ancora spento o fermo,
+          scollega il cavo e ricollegalo.</p>
+        <button class="pulsante secondario ricomincia" type="button">Torna all'inizio</button>
+      </div>
+
+      <div id="stato-errore" class="stato" hidden>
+        <p id="testo-errore" class="errore"></p>
+        <button id="pulsante-altro-file" class="pulsante principale" type="button" hidden>Scegli un altro file</button>
+        <button class="pulsante secondario ricomincia" type="button">Riprova dall'inizio</button>
+      </div>
+
+      <input id="scelta-file" type="file" accept=".bin,application/octet-stream" hidden>
+
+      <details class="dettagli">
+        <summary>Dettagli tecnici</summary>
+        <pre id="registro"></pre>
+      </details>
+    </section>
+
+    <section class="aiuto" aria-labelledby="titolo-aiuto">
+      <h2 id="titolo-aiuto">Se qualcosa non va</h2>
+      <h3>Il display non compare nell'elenco</h3>
+      <p>Alcuni cavi servono solo a ricaricare: usa un cavo USB per dati (per esempio quello del telefono che usi per
+        copiare le foto). Prova anche un'altra porta USB del computer.</p>
+      <h3>Errore di collegamento</h3>
+      <p>Scollega il cavo. Tieni premuto il tasto <strong>BOOT</strong> del display e, sempre tenendolo
+        premuto, ricollega il cavo. Lascia il tasto e riprova.</p>
+      <h3>La scrittura si è interrotta</h3>
+      <p>Rifai l'aggiornamento dall'inizio. Il display non si rompe: al massimo resta spento finché non lo riscrivi.</p>
+    </section>
+
+    <details class="completo" id="sezione-completo">
+      <summary>Ripristino completo (solo se te lo chiede Filippo)</summary>
+      <p>Cancella <strong>tutta</strong> la memoria del display, comprese la rete WiFi e le impostazioni, e la riscrive
+        da zero. Serve il file “completo” (con <code>factory</code> nel nome). Dopo il ripristino dovrai rifare la
+        configurazione del WiFi.</p>
+      <label class="spunta">
+        <input type="checkbox" id="conferma-completo">
+        Ho capito: cancella anche WiFi e impostazioni.
+      </label>
+      <button id="pulsante-completo" class="pulsante secondario" type="button" disabled>Ripristino completo</button>
+    </details>
+
+    <footer class="piede">
+      <p>GP DataBoard © 2026 Filippo Guidi — non affiliato a Dorna Sports.</p>
+      <p><a href="https://github.com/guidifilipporsm/motogp-display-aggiornamenti/blob/main/THIRD_PARTY_NOTICES.md">Licenze</a></p>
+    </footer>
+  </main>
+</body>
+</html>
