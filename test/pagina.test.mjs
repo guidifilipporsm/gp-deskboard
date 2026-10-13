@@ -96,7 +96,7 @@ test("pagina: Aggiorna -> file sbagliati rifiutati, file giusto mostra la versio
   await pagina.waitForSelector("#stato-file:not([hidden])");
 
   // File completo scelto con Aggiorna
-  await scegliFile(pagina, "#pulsante-file", completo(), "gp-databoard-1.0.0.factory.bin");
+  await scegliFile(pagina, "#pulsante-file", completo(), "gp-deskboard-1.0.0.factory.bin");
   await pagina.waitForSelector("#stato-errore:not([hidden])");
   assert.equal(await pagina.textContent("#testo-errore"), MESSAGGI.completoInAggiorna);
 
@@ -105,10 +105,10 @@ test("pagina: Aggiorna -> file sbagliati rifiutati, file giusto mostra la versio
   await pagina.waitForFunction((m) => document.getElementById("testo-errore").textContent === m, MESSAGGI.chipSbagliato);
 
   // File giusto
-  await scegliFile(pagina, "#pulsante-altro-file", immagine(), "gp-databoard-1.0.0.bin");
+  await scegliFile(pagina, "#pulsante-altro-file", immagine(), "gp-deskboard-1.0.0.bin");
   await pagina.waitForSelector("#stato-conferma:not([hidden])");
   assert.equal(await pagina.textContent("#versione-trovata"), "1.0.0");
-  assert.equal(await pagina.textContent("#nome-file"), "gp-databoard-1.0.0.bin");
+  assert.equal(await pagina.textContent("#nome-file"), "gp-deskboard-1.0.0.bin");
   assert.ok(await pagina.isHidden("#avviso-completo"));
   assert.equal(await pagina.textContent("#pulsante-scrivi"), "Scrivi sul display");
 
@@ -130,11 +130,11 @@ test("pagina: Ripristino completo solo dopo la conferma, rifiuta il file normale
   await pagina.click("#pulsante-completo");
   await pagina.waitForSelector("#stato-file:not([hidden])");
 
-  await scegliFile(pagina, "#pulsante-file", immagine(), "gp-databoard-1.0.0.bin");
+  await scegliFile(pagina, "#pulsante-file", immagine(), "gp-deskboard-1.0.0.bin");
   await pagina.waitForSelector("#stato-errore:not([hidden])");
   assert.equal(await pagina.textContent("#testo-errore"), MESSAGGI.normaleInRipristino);
 
-  await scegliFile(pagina, "#pulsante-altro-file", completo(), "gp-databoard-1.0.0.factory.bin");
+  await scegliFile(pagina, "#pulsante-altro-file", completo(), "gp-deskboard-1.0.0.factory.bin");
   await pagina.waitForSelector("#stato-conferma:not([hidden])");
   assert.ok(await pagina.isVisible("#avviso-completo"));
   assert.equal(await pagina.textContent("#pulsante-scrivi"), "Cancella tutto e scrivi");

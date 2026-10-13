@@ -1,4 +1,4 @@
-// GP DataBoard - logica della pagina di aggiornamento.
+// GP DeskBoard - logica della pagina di aggiornamento.
 // Copyright (c) 2026 Filippo Guidi. Tutti i diritti riservati.
 
 import { ESPLoader, Transport } from "../lib/esptool-js-0.6.1/esptool.js";

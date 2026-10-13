@@ -2,7 +2,7 @@
 // controlla (non sono firmware veri e non vanno mai scritti su un display).
 
 // Intestazione di un'immagine ESP (24 byte) + un po' di contenuto.
-export function immagine({ dimensione = 200 * 1024, magic = 0xe9, chipId = 9, firma = "GPDATABOARD-FW 1.0.0" } = {}) {
+export function immagine({ dimensione = 200 * 1024, magic = 0xe9, chipId = 9, firma = "GPDESKBOARD-FW 1.0.0" } = {}) {
   const dati = new Uint8Array(dimensione);
   for (let i = 24; i < dimensione; i++) dati[i] = (i * 31 + 7) & 0xff; // contenuto qualunque
   dati[0] = magic;

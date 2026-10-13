@@ -1,4 +1,4 @@
-// GP DataBoard - scrittura del firmware sul display con esptool-js.
+// GP DeskBoard - scrittura del firmware sul display con esptool-js.
 // Copyright (c) 2026 Filippo Guidi. Tutti i diritti riservati.
 //
 // ESPLoader e Transport vengono passati da fuori (in pagina: esptool-js; nei test:
@@ -92,7 +92,7 @@ export async function scriviFirmware({ porta, modalita, dati, ESPLoader, Transpo
 
     if (!loader.chip || loader.chip.CHIP_NAME !== "ESP32-S3") {
       throw new ErroreDisplay(
-        "Il dispositivo scelto non è un GP DataBoard. Riprova e scegli il display nell'elenco.",
+        "Il dispositivo scelto non è un GP DeskBoard. Riprova e scegli il display nell'elenco.",
         "scheda",
       );
     }

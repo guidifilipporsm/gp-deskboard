@@ -9,7 +9,7 @@ test("Aggiorna: file giusto -> accettato, versione letta", () => {
 });
 
 test("Aggiorna: versioni con suffisso", () => {
-  assert.equal(controllaAggiornamento(immagine({ firma: "GPDATABOARD-FW 1.2.10-beta1" })).versione, "1.2.10-beta1");
+  assert.equal(controllaAggiornamento(immagine({ firma: "GPDESKBOARD-FW 1.2.10-beta1" })).versione, "1.2.10-beta1");
 });
 
 test("Aggiorna: file vuoto", () => {
@@ -38,11 +38,11 @@ test("Aggiorna: limite di dimensione 0x300000", () => {
   assert.equal(controllaAggiornamento(immagine({ dimensione: 0x300001 })).errore, MESSAGGI.troppoGrande);
 });
 
-test("Aggiorna: senza firma GPDATABOARD-FW", () => {
+test("Aggiorna: senza firma GPDESKBOARD-FW", () => {
   assert.equal(controllaAggiornamento(immagine({ firma: null })).errore, MESSAGGI.senzaFirma);
   // firma senza versione dopo, o con versione che non inizia con una cifra
-  assert.equal(controllaAggiornamento(immagine({ firma: "GPDATABOARD-FW " })).errore, MESSAGGI.senzaFirma);
-  assert.equal(controllaAggiornamento(immagine({ firma: "GPDATABOARD-FW x1" })).errore, MESSAGGI.senzaFirma);
+  assert.equal(controllaAggiornamento(immagine({ firma: "GPDESKBOARD-FW " })).errore, MESSAGGI.senzaFirma);
+  assert.equal(controllaAggiornamento(immagine({ firma: "GPDESKBOARD-FW x1" })).errore, MESSAGGI.senzaFirma);
   // firma di un altro progetto
   assert.equal(controllaAggiornamento(immagine({ firma: "ALTROPROGETTO 1.0.0" })).errore, MESSAGGI.senzaFirma);
 });
@@ -86,6 +86,6 @@ test("Ripristino: file troncato (niente programma a 0x10000)", () => {
 });
 
 test("trovaVersione: salta occorrenze parziali e trova quella buona", () => {
-  const dati = new TextEncoder().encode("xxGPDATABOARD-Fxx GPDATABOARD-FW 2.3.4\0");
+  const dati = new TextEncoder().encode("xxGPDESKBOARD-Fxx GPDESKBOARD-FW 2.3.4\0");
   assert.equal(trovaVersione(dati), "2.3.4");
 });

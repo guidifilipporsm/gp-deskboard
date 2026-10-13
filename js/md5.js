@@ -1,4 +1,4 @@
-// GP DataBoard - MD5 di un Uint8Array, in esadecimale minuscolo.
+// GP DeskBoard - MD5 di un Uint8Array, in esadecimale minuscolo.
 // Copyright (c) 2026 Filippo Guidi. Tutti i diritti riservati.
 //
 // Serve a esptool-js per verificare, dopo la scrittura, che i dati nella flash

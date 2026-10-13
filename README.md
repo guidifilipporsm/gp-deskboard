@@ -1,6 +1,6 @@
-# GP DataBoard – Aggiornamenti
+# GP DeskBoard – Aggiornamenti
 
-Pagina web per aggiornare il display **GP DataBoard** dal computer, con il cavo USB.
+Pagina web per aggiornare il display **GP DeskBoard** dal computer, con il cavo USB.
 
 **Pagina:** https://guidifilipporsm.github.io/motogp-display-aggiornamenti/
 
@@ -14,7 +14,7 @@ Telegram: **non** è in questo repository né sulla pagina.
 - **Ripristino completo** (in fondo alla pagina, con conferma): cancella tutta la flash e scrive il
   file completo (`firmware.factory.bin` di PlatformIO) da `0x0`.
 - Prima di scrivere la pagina controlla il file: immagine ESP (`0xE9`), chip ESP32-S3 (chip_id 9),
-  dimensione, firma `GPDATABOARD-FW <versione>`. La versione trovata viene mostrata prima di scrivere.
+  dimensione, firma `GPDESKBOARD-FW <versione>`. La versione trovata viene mostrata prima di scrivere.
 - Scrittura con [esptool-js](https://github.com/espressif/esptool-js) 0.6.1 (Espressif, Apache-2.0),
   incluso in `lib/`: la pagina non usa servizi esterni oltre a GitHub Pages (anche i font sono inclusi).
 
@@ -47,4 +47,4 @@ anche usando il vero esptool-js.
 ## Licenza
 
 © 2026 Filippo Guidi. Tutti i diritti riservati: vedi [LICENSE](LICENSE).
-GP DataBoard non è affiliato a Dorna Sports.
+GP DeskBoard non è affiliato a Dorna Sports.

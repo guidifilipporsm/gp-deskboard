@@ -1,4 +1,4 @@
-// GP DataBoard - controlli sul file del firmware PRIMA di scriverlo.
+// GP DeskBoard - controlli sul file del firmware PRIMA di scriverlo.
 // Copyright (c) 2026 Filippo Guidi. Tutti i diritti riservati.
 //
 // Modulo senza dipendenze dal browser: viene usato dalla pagina e dai test (Node).
@@ -12,14 +12,14 @@ export const MAX_COMPLETO = 0x400000; // tutta la flash: 4 MB
 export const MAGIC_IMMAGINE = 0xe9; // primo byte di ogni immagine ESP
 export const CHIP_ID_ESP32S3 = 9; // chip_id dell'ESP32-S3 nell'intestazione
 export const OFFSET_CHIP_ID = 12; // uint16 little-endian nell'intestazione
-export const FIRMA = "GPDATABOARD-FW ";
+export const FIRMA = "GPDESKBOARD-FW ";
 
 // Messaggi mostrati all'utente: brevi e in italiano.
 export const MESSAGGI = {
   vuoto: "Il file è vuoto. Scaricalo di nuovo dal gruppo Telegram.",
   nonImmagine: "Questo file non è un aggiornamento del display. Scegli il file .bin scaricato dal gruppo Telegram.",
-  chipSbagliato: "Questo file è per un altro tipo di scheda, non per GP DataBoard.",
-  senzaFirma: "Questo file non è un aggiornamento di GP DataBoard.",
+  chipSbagliato: "Questo file è per un altro tipo di scheda, non per GP DeskBoard.",
+  senzaFirma: "Questo file non è un aggiornamento di GP DeskBoard.",
   troppoGrande: "Il file è troppo grande per il display. Scaricalo di nuovo dal gruppo Telegram.",
   completoInAggiorna:
     "Questo è il file per il “Ripristino completo”, non per l'aggiornamento normale. " +
@@ -56,7 +56,7 @@ export function sembraCompleto(dati) {
   );
 }
 
-// Cerca la firma "GPDATABOARD-FW " e restituisce la versione che la segue
+// Cerca la firma "GPDESKBOARD-FW " e restituisce la versione che la segue
 // (es. "1.0.0"), oppure null se la firma non c'e'.
 export function trovaVersione(dati) {
   const firma = Array.from(FIRMA, (c) => c.charCodeAt(0));

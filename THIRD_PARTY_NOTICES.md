@@ -1,6 +1,6 @@
-# GP DataBoard — componenti di terze parti
+# GP DeskBoard — componenti di terze parti
 
-Il firmware di GP DataBoard (Copyright (c) 2026 Filippo Guidi, vedi `LICENSE`) contiene i componenti
+Il firmware di GP DeskBoard (Copyright (c) 2026 Filippo Guidi, vedi `LICENSE`) contiene i componenti
 qui sotto, ciascuno con la propria licenza. I testi completi delle licenze sono nella cartella
 `licenze/`. Questo elenco va tenuto aggiornato quando cambia una libreria (versione o licenza).
 
