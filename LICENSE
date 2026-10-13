@@ -1,0 +1,29 @@
+GP DataBoard – Pagina di aggiornamento
+Copyright (c) 2026 Filippo Guidi. Tutti i diritti riservati.
+
+Il codice di questa pagina (HTML, CSS, JavaScript, testi e grafica) e' di
+Filippo Guidi. E' pubblico solo per essere letto e usato per aggiornare il
+proprio display GP DataBoard. Senza autorizzazione scritta di Filippo Guidi
+sono vietati copia, modifica, redistribuzione e uso commerciale, salvo i
+diritti riconosciuti dalle licenze di terze parti.
+
+Componenti di terze parti inclusi in questo repository, ciascuno con la
+propria licenza (che prevale su quanto sopra per quel componente):
+- lib/esptool-js-0.6.1/ : esptool-js di Espressif Systems, Apache License 2.0
+  (contiene anche pako, licenza MIT e Zlib). Vedi i file LICENSE e NOTICE
+  in quella cartella.
+- fonts/ : font Barlow e Barlow Condensed, SIL Open Font License 1.1.
+  Vedi i file OFL-*.txt in quella cartella.
+
+GP DataBoard non e' affiliato a Dorna Sports.
+
+--- English summary ---
+
+GP DataBoard – Update page. Copyright (c) 2026 Filippo Guidi. All rights
+reserved. The code of this page is published for reading and for updating
+your own GP DataBoard display only. Copying, modifying, redistributing or
+commercial use without written permission is prohibited, except for the
+rights granted by third-party licenses. Third-party components (esptool-js,
+Apache-2.0, including pako, MIT/Zlib; Barlow fonts, SIL OFL 1.1) remain
+under their own licenses, found in their folders. Not affiliated with Dorna
+Sports.
