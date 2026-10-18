@@ -2,7 +2,7 @@
 
 Pagina web per aggiornare il display **GP DeskBoard** dal computer, con il cavo USB.
 
-**Pagina:** https://guidifilipporsm.github.io/motogp-display-aggiornamenti/
+**Pagina:** https://guidifilipporsm.github.io/gp-deskboard/
 
 Serve Chrome o Edge su un computer (usa Web Serial). Il file del firmware si scarica dal gruppo
 Telegram: **non** è in questo repository né sulla pagina.
