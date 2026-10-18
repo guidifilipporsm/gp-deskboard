@@ -1,7 +1,7 @@
 {
   "formato": 1,
-  "versione": 1792349512,
-  "generato": "2026-10-18 20:51 (prova)",
+  "versione": 1792352690,
+  "generato": "2026-10-18 21:44",
   "anni": [2025, 2026],
   "posti": [
     [2025, "MotoGP", 1, "#7E2AD8", 2],
@@ -154,10 +154,10 @@
     [2026, "Moto3", 562, "#FFD800", 31],
     [2026, "Moto3", 563, "#57B543", 36],
     [2026, "Moto3", 564, "#FF2200", 35],
-    [2026, "Moto3", 565, "#A10010", 38],
+    [2026, "Moto3", 565, "#8C000F", 38],
     [2026, "Moto3", 566, "#DB3123", 28],
     [2026, "Moto3", 567, "#57B543", 36],
-    [2026, "Moto3", 568, "#A10010", 38],
+    [2026, "Moto3", 568, "#8C000F", 38],
     [2026, "Moto3", 569, "#121212", 39],
     [2026, "Moto3", 570, "#C92C02", 30],
     [2026, "Moto3", 571, "#029EB7", 34],
@@ -296,7 +296,7 @@
     [2026, "Moto3", "CFMOTO Valresa Aspar Team", "#029EB7", 34],
     [2026, "Moto3", "CFMOTO Viel Aspar Team", "#029EB7", 34],
     [2026, "Moto3", "CIP Green Power", "#57B543", 36],
-    [2026, "Moto3", "CODE Motorsports", "#A10010", 38],
+    [2026, "Moto3", "CODE Motorsports", "#8C000F", 38],
     [2026, "Moto3", "GRYD - MLav Racing", "#0F4D9E", 33],
     [2026, "Moto3", "GRYD Racing", "#0F4D9E", 33],
     [2026, "Moto3", "Honda Team Asia", "#FAFAFA", 37],
@@ -387,7 +387,7 @@
     [2026, "Moto3", 35, "AEON Credit - MSI", "#FF2200", true],
     [2026, "Moto3", 36, "CIP Green Power", "#57B543", true],
     [2026, "Moto3", 37, "Honda Team Asia", "#FAFAFA", true],
-    [2026, "Moto3", 38, "CODE Motorsports", "#A10010", true],
+    [2026, "Moto3", 38, "CODE Motorsports", "#8C000F", true],
     [2026, "Moto3", 39, "LIQUI MOLY Intact GP", "#121212", true]
   ]
 }
