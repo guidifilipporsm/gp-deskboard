@@ -29,7 +29,7 @@ Telegram: **non** è in questo repository né sulla pagina.
 | `fonts/` | Barlow e Barlow Condensed (SIL OFL 1.1) |
 | `licenze/`, `THIRD_PARTY_NOTICES.md` | avvisi delle librerie del firmware |
 | `test/` | test automatici (senza display) |
-| `colori/` | *previsto più avanti:* JSON con i colori dei team, scaricato dal display una volta a settimana |
+| `colori/` | `colori_team.json`: colori dei team, GENERATO da `strumenti/genera_colori_team.py` del firmware (mai a mano); i display lo scaricano nei weekend di gara |
 
 ## Provarla
 
