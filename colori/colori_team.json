@@ -1,7 +1,7 @@
 {
   "formato": 1,
-  "versione": 1792359027,
-  "generato": "2026-10-18 23:30",
+  "versione": 1792782399,
+  "generato": "2026-10-23 21:06",
   "anni": [2025, 2026],
   "firmware_ultimo": "",
   "posti": [
@@ -286,6 +286,7 @@
     [2026, "Moto2", "QJMOTOR - Green Power - MSI", "#E80E00", 24],
     [2026, "Moto2", "QJMOTOR - JP Financial - MSI", "#E80E00", 24],
     [2026, "Moto2", "QJMOTOR - PONT GRUP - MSI", "#E80E00", 24],
+    [2026, "Moto2", "QJMOTOR - R.O.M.E.A - MSI", "#E80E00", 24],
     [2026, "Moto2", "QJMOTOR - Reverte - MSI", "#E80E00", 24],
     [2026, "Moto2", "QJMOTOR - Xeramic - MSI", "#E80E00", 24],
     [2026, "Moto2", "QJMOTOR -R.O.M.E.A - MSI", "#E80E00", 24],
